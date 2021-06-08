@@ -267,7 +267,9 @@ impl pallet_template::Trait for Runtime {
 }
 
 impl pallet_kitties::Trait for Runtime {
+
 	type Event = Event;
+
 }
 
 // Create the runtime by composing the FRAME pallets that were previously configured.
@@ -288,7 +290,7 @@ construct_runtime!(
 		// Include the custom logic from the template pallet in the runtime.
 		TemplateModule: pallet_template::{Module, Call, Storage, Event<T>},
 		// Substrate Kitties module
-		Kitties: pallet_kitties::{Module, Storage, Call, Event<T>},
+		Kitties: pallet_kitties::{Module,Storage,Call,Event<T>},
 	}
 );
 
